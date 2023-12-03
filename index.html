@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+  <script src="script.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <title>index</title>
+</head>
+
+<body>
+  <div id="fullpage">
+    <div class="section">
+      <div class="video-con">
+        <video autoplay loop muted preload="auto">
+          <source src="./video/front.mp4" />
+        </video>
+      </div>
+      <button class="wave-button" id="changeVideoButton"></button>
+    </div>
+
+    <div class="section">
+      <div class="video-con2">
+        <video autoplay loop muted preload="auto">
+          <source src="./video/body1.mp4" />
+        </video>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="third third-video" id="video-container">
+        <div class="content-container">
+          <div class="thirdtext">
+            <p>집으로 돌아가며 이상한 느낌이 들었다</p>
+            <br />
+            <p>문이 열려있었던 것이다.</p>
+            <p>왜 문이 열렸는지 생각할 겨를도 없이 긴장되기 시작했다.</p>
+            <br />
+            <p>두려움에 휩싸인 채, 귀를 기울였다.</p>
+            <br />
+
+            <p>째깍거리며 바쁘게 돌아가는 시계소리가 기분 나쁘게 느껴진다.</p>
+          </div>
+
+          <div class="gif-container">
+            <img src="./gif/wlaking.gif" alt="GIF" />
+          </div>
+        </div>
+        <!-- 여기서 -->
+        <img src="./img/down.jpg" alt="" id="popup-img" onclick="" />
+        <div id="popup-contain">
+          <div id="popup">
+            <span id="closeBtn">&times;</span>
+            <video id="video" controls>
+              <source src="./video/trailer.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <!-- 여기까지 -->
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="video-con2">
+        <a href="https://youtu.be/Oe8Uv_WOihk">
+          <video autoplay loop muted preload="auto" onclick="window.location.href=this.parentElement.href;">
+            <source src="./video/loding.mp4" />
+          </video>
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="video-con3">
+        <video autoplay muted preload="auto" id="endVideo">
+          <source src="./video/end1.mp4" />
+        </video>
+      </div>
+
+
+      <div class="textbox">
+        <p>이 웹페이지는 학교 과제 및 학습 용도 목적이며, 어떠한 수입이나 판매, 상업적 목적을 가지지 않습니다.
+          <br>
+          This webpage is for school assignments and learning purposes and has no income, sales, or commercial purpose.
+          <br>
+          ⓒ kim_boyoung
+        </p>
+      </div>
+    </div>
+
+
+
+    <!-- 여기는 섹션 마지막 -->
+  </div>
+
+
+  <div id="menu">
+    <a class="menu-item active" data-menuanchor="section2" href="#section2">개요</a>
+    <a class="menu-item" data-menuanchor="section3" href="#section3">트레일러</a>
+    <a class="menu-item" data-menuanchor="section4" href="#section4">아<br>래</a>
+    <a class="menu-item" data-menuanchor="section5" href="#section5">End</a>
+    <!-- <a class="menu-item" data-menuanchor="section6" href="#section6">Film</a> -->
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $("#fullpage").fullpage({
+        verticalCentered: false,
+        autoScrolling: true,
+      });
+
+      // 이벤트 핸들러 함수
+      function moveNextSection() {
+        $.fn.fullpage.moveSectionDown();
+      }
+
+      $("#changeVideoButton").click(function () {
+        const videoElement = document.querySelector(".video-con video");
+        videoElement.src = "./video/front2.mp4";
+        videoElement.load();
+        videoElement.play();
+
+        // 일정 시간 후에 다음 섹션으로 이동
+        setTimeout(moveNextSection, 6000); // 5000 밀리초 (5초) 후에 다음 섹션으로 이동
+      });
+    });
+
+    document.getElementById("endVideo").addEventListener("ended", function () {
+  // 비디오가 끝나면 자동으로 ./html/Making film.html로 이동
+  window.location.href = "./html/Making film.html";
+});
+
+  </script>
+
+  <script defer>
+    // 이미지 클릭 시 팝업 띄우기
+    document.getElementById("popup-img").addEventListener("click", function () {
+      document.getElementById("popup-contain").style.display = "flex";
+      document.getElementById("menu").style.display = "none";
+    });
+
+    // 팝업 닫기
+    document.getElementById("closeBtn").addEventListener("click", function () {
+      document.getElementById("popup-contain").style.display = "none";
+      document.getElementById("menu").style.display = "flex";
+    });
+  </script>
+
+  <script>
+    // 버튼 클릭 시 동작
+    $(document).ready(function () {
+      $("#changeVideoButton").click(function () {
+        const videoElement = document.querySelector(".video-con video");
+        videoElement.src = "./video/front2.mp4";
+        videoElement.load();
+        videoElement.play();
+      });
+    });
+  </script>
+
+  <script>
+    // 링크 클릭 시 동작
+    $(document).ready(function () {
+      $("#menu a").click(function () {
+        // 링크 클릭 시 추가 동작
+        var target = $(this).attr("href");
+        $("html, body").animate(
+          {
+            scrollTop: $(target).offset().top,
+          },
+          1000
+        );
+        return false;
+      });
+    });
+  </script>
+</body>
+
+</html>
