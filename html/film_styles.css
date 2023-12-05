@@ -13,7 +13,7 @@ body {
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   background-color: #ffffff;
-  background-image: url(../../img/noise2.png);
+  background-image: url(../img/noise2.png);
 }
 
 body::-webkit-scrollbar {
@@ -269,6 +269,7 @@ ul {
     font-weight: 600;
     color: black;
     margin-right: -30px;
+    
   }
 
   .codrops-nav_list {
@@ -278,6 +279,8 @@ ul {
 
 
 @media only screen and (max-width: 600px) {
+
+  
   .options-menu {
     display: none;
   }
@@ -297,3 +300,4 @@ ul {
   .mainbox {
     margin-top: 31%;}
 }
+

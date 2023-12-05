@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  background-color: #1a1a1a;
+  background-image: url(../img/noise.png);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.video-con {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.video-con video {
+  width: 100vw;
+}
+
+
+
+
+/* -----------------------------------------여기까지 노말 */
+
+
+.codrops-header {
+  position: relative;
+  z-index: 100;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 100%;
+  padding: 1em;
+}
+
+.codrops-links {
+  position: relative;
+  width: 100vw;
+  margin: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.codrops-logo {
+  width: 42px;
+}
+
+.codrops-logo a img {
+  width: 42px;
+}
+
+.codrops-nav_list {
+  display: flex;
+  align-items: center;
+
+}
+
+.codrops-nav_list li {
+  margin-left: 45px;
+}
+
+.codrops-nav_list li a {
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+.codrops-nav_list li a.active {
+  color: #ffb662;
+}
+
+.codrops-header li a:hover {
+  color: #ffb662;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* 여기는 바디------------------------------------- */
+
+.mainbox {
+  margin-top: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.test1 {
+  position: relative;
+  /* top: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 25%;
+}
+
+.test1 p {
+  padding: 100px;
+}
+
+.hov {
+  display: block;
+  width: 30%;
+  height: auto;
+  padding: 50px;
+}
+
+.hov video{
+  display: block;
+  width: 30%;
+  height: auto;
+  padding: 50px;
+}
+
+/* 
+.hov video{
+  display: block;
+  width: 30%;
+  height: auto;
+  padding: 100px;
+} */
+
+.box-left {
+  position: static;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  color: #e4e4e4;
+  font-weight: 100;
+  overflow-wrap: break-word;
+  /* 줄바꿈 추가 */
+  font-size: 18px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+.image-container {
+  margin-top: -25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 50px;
+  opacity: 95%;
+}
+
+.second-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-container img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 50px;
+  opacity: 95%;
+}
+
+
+
+/* 첫 번째 섹션의 스타일을 추가하여 높이를 크게 설정합니다. */
+.section.first-section {
+  height: 100vh;
+  /* 화면 높이의 100%로 설정 */
+}
+
+
+
+.cara-container {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cara-container img {
+  width: 150px
+}
+
+.cara2-container {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cara2-container img {
+  width: 300px
+}
+
+
+.scroll-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  /* 보더 스타일 및 색상을 추가합니다 */
+}
+
+.scroll-to-top::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  /* 선의 시작 위치를 원의 중심으로 조정 */
+  left: 50%;
+  /* 선의 시작 위치를 원의 중심으로 조정 */
+  width: 2px;
+  /* 선의 너비 */
+  height: 20px;
+  /* 선의 높이 */
+  background-color: #fff;
+  /* 선의 색상 */
+  transform: translate(-50%, -50%);
+  /* 선을 가운데로 이동 */
+}
+
+
+
+#toggleButton img {
+  width: 28px;
+  height: 28px;
+}
+
+
+.options-menu {
+  display: none;
+  position: fixed;
+  top: 50%;
+  /* 세로 중앙 정렬을 위해 50%로 설정 */
+  right: 0;
+  transform: translate(0, -50%);
+  /* 세로 중앙 정렬을 위한 변환 */
+  background-color: #f0f0f00c;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.options-menu.show {
+  display: block;
+}
+
+.options-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.options-menu li {
+  margin: 20px 0;
+}
+
+.options-menu a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+
+
+@media (min-width: 768px) {
+  #toggleButton {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #toggleButton {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin-right: -30px;
+  }
+
+  .codrops-nav_list {
+    display: none;
+  }
+
+  .test1 {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 90%;
+  }
+
+  .box-left {
+    margin-top: 10px;
+    /* 이미지 아래로 간격을 두기 위한 여백 설정 */
+  }
+  .box-left p {
+    font-size: 15px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .options-menu {
+    display: none;
+  }
+
+  .codrops-nav_list {
+    display: none;
+    /* 네비게이션바 메뉴를 모바일에서 가리기 */
+  }
+
+  #toggleButton {
+    display: inline-block;
+    /* 토글 버튼을 인라인 블록으로 변경하여 가로 배치 */
+  }
+
+  .toggle-menu {
+    display: block;
+  }
+
+  .hov {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .box1 img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
